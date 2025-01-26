@@ -177,7 +177,10 @@
                 "type": "object",
                 "properties": {
                     "contact_roles": {
-                        "$ref": "#/components/schemas/Contact_Role"
+                        "items": {
+                            "$ref": "#/components/schemas/Contact_Role"
+                        },
+                        "type": "array"
                     }
                 },
                 "required": [
@@ -188,7 +191,10 @@
                 "type": "object",
                 "properties": {
                     "contact_roles": {
-                        "$ref": "#/components/schemas/Contact_Role"
+                        "items": {
+                            "$ref": "#/components/schemas/Contact_Role"
+                        },
+                        "type": "array"
                     }
                 },
                 "required": [
@@ -241,11 +247,14 @@
                 "type": "object",
                 "properties": {
                     "contact_roles": {
-                        "oneOf": [
-                            {
-                                "$ref": "#/components/schemas/Success_Response"
-                            }
-                        ]
+                        "items": {
+                            "oneOf": [
+                                {
+                                    "$ref": "#/components/schemas/Success_Response"
+                                }
+                            ]
+                        },
+                        "type": "array"
                     }
                 },
                 "required": [
@@ -256,11 +265,14 @@
                 "type": "object",
                 "properties": {
                     "contact_roles": {
-                        "oneOf": [
-                            {
-                                "$ref": "common.json#/components/schemas/MandatoryError"
-                            }
-                        ]
+                        "items": {
+                            "oneOf": [
+                                {
+                                    "$ref": "./common.json#/components/schemas/MandatoryError"
+                                }
+                            ]
+                        },
+                        "type": "array"
                     }
                 }
             },
@@ -268,11 +280,14 @@
                 "type": "object",
                 "properties": {
                     "contact_roles": {
-                        "oneOf": [
-                            {
-                                "$ref": "common.json#/components/schemas/InvalidValueError"
-                            }
-                        ]
+                        "items": {
+                            "oneOf": [
+                                {
+                                    "$ref": "./common.json#/components/schemas/InvalidValueError"
+                                }
+                            ]
+                        },
+                        "type": "array"
                     }
                 }
             },
@@ -280,11 +295,14 @@
                 "type": "object",
                 "properties": {
                     "contact_roles": {
-                        "oneOf": [
-                            {
-                                "$ref": "common.json#/components/schemas/InvalidTypeError"
-                            }
-                        ]
+                        "items": {
+                            "oneOf": [
+                                {
+                                    "$ref": "./common.json#/components/schemas/InvalidTypeError"
+                                }
+                            ]
+                        },
+                        "type": "array"
                     }
                 }
             },
@@ -292,11 +310,14 @@
                 "type": "object",
                 "properties": {
                     "contact_roles": {
-                        "oneOf": [
-                            {
-                                "$ref": "common.json#/components/schemas/MaxLengthError"
-                            }
-                        ]
+                        "items": {
+                            "oneOf": [
+                                {
+                                    "$ref": "./common.json#/components/schemas/MaxLengthError"
+                                }
+                            ]
+                        },
+                        "type": "array"
                     }
                 }
             },
@@ -680,32 +701,35 @@
                                     "type": "object",
                                     "properties": {
                                         "contact_roles": {
-                                            "oneOf": [
-                                                {
-                                                    "$ref": "#/components/schemas/Max_Length_API_Exception"
-                                                },
-                                                {
-                                                    "$ref": "#/components/schemas/Mandatory_API_Exception"
-                                                },
-                                                {
-                                                    "$ref": "#/components/schemas/Invalid_Field_API_Exception"
-                                                },
-                                                {
-                                                    "$ref": "#/components/schemas/Invalid_Data_API_Exception"
-                                                },
-                                                {
-                                                    "$ref": "#/components/schemas/Required_Param_API_Exception"
-                                                },
-                                                {
-                                                    "$ref": "#/components/schemas/Parse_Datatype_API_Exception"
-                                                },
-                                                {
-                                                    "$ref": "#/components/schemas/Expected_Data_API_Exception"
-                                                },
-                                                {
-                                                    "$ref": "#/components/schemas/Duplicate_Data_API_Exception"
-                                                }
-                                            ]
+                                            "items": {
+                                                "oneOf": [
+                                                    {
+                                                        "$ref": "#/components/schemas/Max_Length_API_Exception"
+                                                    },
+                                                    {
+                                                        "$ref": "#/components/schemas/Mandatory_API_Exception"
+                                                    },
+                                                    {
+                                                        "$ref": "#/components/schemas/Invalid_Field_API_Exception"
+                                                    },
+                                                    {
+                                                        "$ref": "#/components/schemas/Invalid_Data_API_Exception"
+                                                    },
+                                                    {
+                                                        "$ref": "#/components/schemas/Required_Param_API_Exception"
+                                                    },
+                                                    {
+                                                        "$ref": "#/components/schemas/Parse_Datatype_API_Exception"
+                                                    },
+                                                    {
+                                                        "$ref": "#/components/schemas/Expected_Data_API_Exception"
+                                                    },
+                                                    {
+                                                        "$ref": "#/components/schemas/Duplicate_Data_API_Exception"
+                                                    }
+                                                ]
+                                            },
+                                            "type": "array"
                                         }
                                     },
                                     "required": [
@@ -713,19 +737,19 @@
                                     ]
                                 },
                                 {
-                                    "$ref": "common.json#/components/schemas/InvalidUrlError"
+                                    "$ref": "./common.json#/components/schemas/InvalidUrlError"
                                 },
                                 {
-                                    "$ref": "common.json#/components/schemas/InvalidTypeError"
+                                    "$ref": "./common.json#/components/schemas/InvalidTypeError"
                                 },
                                 {
-                                    "$ref": "common.json#/components/schemas/MandatoryError"
+                                    "$ref": "./common.json#/components/schemas/MandatoryError"
                                 },
                                 {
-                                    "$ref": "common.json#/components/schemas/InvalidValueError"
+                                    "$ref": "./common.json#/components/schemas/InvalidValueError"
                                 },
                                 {
-                                    "$ref": "common.json#/components/schemas/MandatoryParamError"
+                                    "$ref": "./common.json#/components/schemas/MandatoryParamError"
                                 },
                                 {
                                     "$ref": "#/components/schemas/MandatoryErrorWrapper"
@@ -805,7 +829,7 @@
         },
         "securitySchemes": {
             "iam-oauth2-schema": {
-                "$ref": "common.json#/components/securitySchemes/iam-oauth2-schema"
+                "$ref": "./common.json#/components/securitySchemes/iam-oauth2-schema"
             }
         }
     }

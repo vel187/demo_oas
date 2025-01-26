@@ -258,7 +258,7 @@
                     "contact_roles": {
                         "oneOf": [
                             {
-                                "$ref": "./common.json#/components/schemas/MandatoryError"
+                                "$ref": "common.json#/components/schemas/MandatoryError"
                             }
                         ]
                     }
@@ -270,7 +270,7 @@
                     "contact_roles": {
                         "oneOf": [
                             {
-                                "$ref": "./common.json#/components/schemas/InvalidValueError"
+                                "$ref": "common.json#/components/schemas/InvalidValueError"
                             }
                         ]
                     }
@@ -282,7 +282,7 @@
                     "contact_roles": {
                         "oneOf": [
                             {
-                                "$ref": "./common.json#/components/schemas/InvalidTypeError"
+                                "$ref": "common.json#/components/schemas/InvalidTypeError"
                             }
                         ]
                     }
@@ -294,7 +294,7 @@
                     "contact_roles": {
                         "oneOf": [
                             {
-                                "$ref": "./common.json#/components/schemas/MaxLengthError"
+                                "$ref": "common.json#/components/schemas/MaxLengthError"
                             }
                         ]
                     }
@@ -713,19 +713,19 @@
                                     ]
                                 },
                                 {
-                                    "$ref": "./common.json#/components/schemas/InvalidUrlError"
+                                    "$ref": "common.json#/components/schemas/InvalidUrlError"
                                 },
                                 {
-                                    "$ref": "./common.json#/components/schemas/InvalidTypeError"
+                                    "$ref": "common.json#/components/schemas/InvalidTypeError"
                                 },
                                 {
-                                    "$ref": "./common.json#/components/schemas/MandatoryError"
+                                    "$ref": "common.json#/components/schemas/MandatoryError"
                                 },
                                 {
-                                    "$ref": "./common.json#/components/schemas/InvalidValueError"
+                                    "$ref": "common.json#/components/schemas/InvalidValueError"
                                 },
                                 {
-                                    "$ref": "./common.json#/components/schemas/MandatoryParamError"
+                                    "$ref": "common.json#/components/schemas/MandatoryParamError"
                                 },
                                 {
                                     "$ref": "#/components/schemas/MandatoryErrorWrapper"
@@ -805,7 +805,7 @@
         },
         "securitySchemes": {
             "iam-oauth2-schema": {
-                "$ref": "./common.json#/components/securitySchemes/iam-oauth2-schema"
+                "$ref": "common.json#/components/securitySchemes/iam-oauth2-schema"
             }
         }
     }
